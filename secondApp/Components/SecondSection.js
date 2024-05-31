@@ -8,8 +8,9 @@ import { Feather } from '@expo/vector-icons';
 const SecondSection = () => {
   return (
     <View style={styles.secondContainer} >
-        <AntDesign name="search1" size={24} color="black" />
+        
         <TextInput style={styles.searchBox} placeholder='Search' placeholderTextColor='black' />
+        <AntDesign name="search1" size={24} color="black" style={{position:'absolute',top:15, left:6}}/>
       
       <View style={styles.slider}>
       <Feather name="sliders" height={40} size={34} color="white" style={{transform:[{rotate:'90deg'}],}} />
@@ -32,11 +33,12 @@ const styles = StyleSheet.create({
     searchBox:{
         width:'75%',
         backgroundColor:'white',
-        borderBottomRightRadius:20,
-        borderTopRightRadius:20,
+        borderRadius:20,
         padding:12,
+        paddingHorizontal:40,
         fontSize:20,
-        fontWeight:'700'
+        fontWeight:'700',
+        position:'relative'
         
         
     },
