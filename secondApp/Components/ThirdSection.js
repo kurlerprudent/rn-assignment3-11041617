@@ -18,7 +18,7 @@ const ThirdSection = () => {
 
     <View style={styles.sectionBox}>
             <Text style={{fontSize:16, fontWeight:'700', lineHeight:19}}>Study</Text>
-            <Text style={{fontSize:14, fontWeight:'400', lineHeight:14, marginBottom:5}} >12 tasks</Text>
+            <Text style={{fontSize:14, fontWeight:'400', lineHeight:14, }} >12 tasks</Text>
             <Image source={require('../assets/woman2.png')} />
         </View>
 
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     },
     sectionBox:{
         marginTop:10,
-        width:175,
+        width:160,
         borderRadius:15,
         height:192,
         padding:16,

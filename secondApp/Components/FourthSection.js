@@ -1,36 +1,32 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 
-const FourthSection = () => {
-
-    const [things, setThings] = useState([
-        {name:'Mobile App Devolopment', key:'1'},
-        {text:'Web Devolopment', key:'2'},
-        {text:'Push Ups', key:'3'}
-    ])
-
-  return (
-    <View style={styles.container}>
+const data = [
+    { name: 'Mobile App Development', key: '1' },
+    { text: 'Web Development', key: '2' },
+    { text: 'Push Ups', key: '3' },
+  ];
+  
+  
+  const FourthSection = () => {
+    return (
       <FlatList
-        data={things}
-        renderItem={(item)=>(
-            <View style={styles.flatListBox}>
-                <Text>{item.name}</Text>
-            </View>
-            
+        data={data}
+        renderItem={({ item }) => (
+          <View style={styles.flatListBox}>
+            <Text style={styles.textEdit} key={item.key}>{item.text || item.name}</Text>
+          </View>
+          
         )}
-      
       />
-
-    </View>
-  )
-}
-
+    );
+  };
 export default FourthSection
 
 const styles = StyleSheet.create({
     container:{
-        marginTop:40
+        marginTop:40,
+        
     },
     flatListBox:{
         marginVertical:20,
@@ -38,8 +34,16 @@ const styles = StyleSheet.create({
         borderWidth:1,
         borderColor:'#E8D1BA',
         borderRadius:15,
-        width:354,
-        height:128
+        width:'90%',
+        height:128,
+        justifyContent:'center',
+        backgroundColor:'white'
+        
     },
+    textEdit:{
+        fontSize:20,
+        fontWeight:'600',
+        marginLeft:20
+    }
     
 })
